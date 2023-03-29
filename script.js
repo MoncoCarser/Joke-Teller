@@ -7,10 +7,9 @@ function buttonDisableEnable() {
 
 // Passing Joke to VoiceRSS API
 function tellME(joke) {
-	const jokeString = joke.trim().replace(/ /g, "%20");
 	VoiceRSS.speech( {
-		key: "bafae21e1c71495ba42275b046b10260", 
-		src: jokeString, 
+		key: "bafae21e1c71495ba42275b046b10260", // this is a free API, and not worried about somone abusing this key
+		src: joke, 
 		hl: "en-us", 
 		r: 0,
 		c: "mp3",
