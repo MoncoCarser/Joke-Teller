@@ -50,7 +50,7 @@ button:disabled {
 }
 
 
-/*Media Query; table or smaller*/
+/*Media Query; tablet or smaller*/
 @media screen and (max-width: 1000px) {
   .container {
     background-position: center center;
