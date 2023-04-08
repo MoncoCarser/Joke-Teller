@@ -8,7 +8,7 @@ function buttonDisableEnable() {
 // Passing Joke to VoiceRSS API
 function tellME(joke) {
 	VoiceRSS.speech( {
-		key: "bafae21e1c71495ba42275b046b10260", // this is a free API, and not worried about somone abusing this key
+		key: "bafae21e1c71495ba42275b046b10260", // this is a free API, and I am not worried about somone else using this key
 		src: joke, 
 		hl: "en-us", 
 		r: 0,
@@ -21,7 +21,7 @@ function tellME(joke) {
 // Get jokes from JOKE API
 async function getJokes() {
 	let joke = "";
-	const apiUrl = "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit"
+	const apiUrl = "https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit" //URL is only asking for programming related jokes
 	try {
 		const response = await fetch(apiUrl);
 		const data = await response.json();
@@ -36,7 +36,7 @@ async function getJokes() {
 		buttonDisableEnable();
 	} catch (error) {
 		// catch errors here
-		console.log("An error to investigate!:", error)
+		console.log("Encountered error in getJokes function:", error)
 	}
 }
 
